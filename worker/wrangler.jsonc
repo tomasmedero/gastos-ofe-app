@@ -1,0 +1,18 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "gastos-ofe-api",
+    "main": "src/index.ts",
+    "compatibility_date": "2026-09-26",
+    "triggers": { "crons": ["0 * * * *"] },
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "gastos-ofe",
+        "database_id": "eb38d852-d857-43bc-a763-40b46e367bfd",
+        "migrations_dir": "migrations"
+      }
+    ],
+    "vars": {
+      "ALLOWED_ORIGINS": "http://localhost:5173,https://gastos-ofe.pages.dev"
+    }
+  }

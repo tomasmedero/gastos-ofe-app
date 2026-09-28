@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "dev": "wrangler dev --test-scheduled",
+      "deploy": "wrangler deploy",
+      "db:local": "wrangler d1 migrations apply gastos-ofe --local",
+      "db:remote": "wrangler d1 migrations apply gastos-ofe --remote",
+      "check": "tsc --noEmit"
+    },
+    "devDependencies": {
+      "@cloudflare/workers-types": "^5.20260926.1",
+      "typescript": "^5.9.0",
+      "wrangler": "^4.0.0"
+    }
+  }
